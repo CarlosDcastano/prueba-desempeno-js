@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "carlos",
+      "email": "carlos@gmail.com",
+      "role": "admin",
+      "password": "carlos123"
+    }
+  ],
+  "tasks": [
+    
+  ]
+}

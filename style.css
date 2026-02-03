@@ -1,0 +1,197 @@
+body{
+    display: flex;
+    background-color: white;
+}
+
+#app {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(242, 249, 253);
+
+}
+
+aside{
+    height: 100vh;
+    width: 15%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+}
+
+.asideInfo{
+    display: flex;
+    gap: 1rem;
+}
+
+.dashboardAdmin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+
+}
+
+#saludoLogout{
+    display: flex;
+    justify-content:space-between;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+#logoutBtn{
+    background-color: white;
+    cursor: pointer;
+
+}
+
+#requestsProducts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:1rem;
+    margin: 0 2rem;
+    border-radius: 5px;
+}
+
+.sectionsProd{
+    background-color: white;
+
+}
+
+
+.formvisible, .signUpSection, #formTaskRegister {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 300px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px, 10px, 10px solid black;
+}
+
+#formsection, .signUpSection{
+    justify-self: center;
+    margin-top: 15rem;
+}
+
+.formOculto {
+    display: none
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#login{
+    color: rgb(12, 73, 227);
+    cursor: pointer;
+}
+
+
+button {
+    background-color: rgb(85, 131, 247);
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+#goBack {
+    background-color: rgb(107, 248, 51);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.dashboardAdmin {
+    display: flex;
+}
+
+#infoNewProduct{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+#togleRegisterProd{
+    max-height: 2rem;
+    color: white
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+#estadistics{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.statusTasks{
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    width: 20%;
+    text-align: center;
+    background-color: white;
+}
+
+
+#titledash{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#productsList{
+    border: 1px rgb(211, 209, 209) solid;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.eachProduct{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    Gap : 1rem;
+    border-bottom: 1px rgb(211, 209, 209) solid;
+}
+
+.EditDelete{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.head{
+    font-weight: bold;
+    
+}
+
