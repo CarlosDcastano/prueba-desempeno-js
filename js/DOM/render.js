@@ -255,12 +255,13 @@ export function renderAdminPage(name) {
 
                     </select>
                     <button type="submit" id="btnFilter">Filter assignee</button>
-                <form>
+                </form>
             </div>
             <button id="togleRegisterProd" type="button">+ New task</button>
         </section>
-
-        <form id="formTaskRegister" style="display: none;">
+        <div id="requestsProducts">
+        <section id="TaskRegister" class="sectionsProd">
+            <form id="formTaskRegister" style="display: none;">
                     <label for="taskName"> Task title</label><br>
                     <input id="taskName" type="text" required><br><br>
 
@@ -292,9 +293,9 @@ export function renderAdminPage(name) {
                     <input id="dueDate" type="date" required><br><br>
 
                     <button id="submitProduct" type="submit">Agregar producto</button>
-                </form>
-
-        
+            </form>
+        </section>
+        </div>
 
         <div id="estadistics">
             <article class="statusTasks">
@@ -426,7 +427,7 @@ export function renderAdminPage(name) {
     }
 
     })
-/*     const filterAssignee = document.getElementById("filterAssignee")
+    const filterAssignee = document.getElementById("filterAssignee")
     state.users.forEach(user => {
         const option = document.createElement("option");
         option.classList.add("eachOption");
@@ -434,7 +435,7 @@ export function renderAdminPage(name) {
         option.textContent = `${user.name}`
 
         filterAssignee.appendChild(option);
-    }) */
+    })
 
     
 

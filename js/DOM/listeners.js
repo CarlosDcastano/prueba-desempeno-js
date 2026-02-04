@@ -161,13 +161,13 @@ app.addEventListener("submit", async (e) => {
 
     });
 
-/*     document.addEventListener("submit", e => {
+    document.addEventListener("submit", e => {
         e.preventDefault();
         if(e.target.id === "btnFilter"){
             const option = document.querySelector(".eachOption").value;
             validarFilter(option)
         }
-    }); */
+    });
 
     document.addEventListener("click", e => {
         if (e.target.id === "logoutBtn") {

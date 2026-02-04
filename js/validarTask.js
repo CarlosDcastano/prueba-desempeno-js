@@ -11,7 +11,7 @@ export function validarTask(task){
         }
 }
 
-/* export function validarFilter(option){
+export function validarFilter(option){
     if(!option){
         console.log("Debe ingresar un valor")
     }
@@ -22,4 +22,4 @@ export function validarTask(task){
         alert("Todo bien")
     }
 
-} */
+}
