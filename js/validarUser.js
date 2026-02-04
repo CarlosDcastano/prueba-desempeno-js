@@ -1,4 +1,4 @@
-import { renderAdminPage, renderUserPage } from "./DOM/render.js";
+import { renderAdminPage, renderUserPage, renderLogin } from "./DOM/render.js";
 import { postUser } from "./services/servicesUsers.js";
 import { state } from "./data/state.js";
 
@@ -43,3 +43,10 @@ export function validarSignup(name, email, password, confirmPassword, rol) {
 
     postUser(name, email, password, rol);
 }
+
+export function logout() {
+    localStorage.removeItem("currentUser");
+    state.currentUser = null;
+    renderLogin();
+}
+

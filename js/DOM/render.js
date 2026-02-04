@@ -75,11 +75,6 @@ export function renderSignUp() {
     )
 }
 
-function logout() {
-    localStorage.removeItem("currentUser");
-    state.currentUser = null;
-    renderLogin();
-}
 
 
 //Render User Page **********************************************
@@ -157,7 +152,7 @@ export function renderUserPage(name) {
                 <label for="editTaskName"> Task title</label><br>
                 <input id="editTaskName" type="text"><br><br>
 
-                <label for="editTaskcategory">Category:</label><br>
+                <label for="editTaskCategory">Category:</label><br>
                 <select id="editTaskCategory" editTaskcategory="category">
                     <option value="mathematics">Mathematics</option>
                     <option value="physics">Physics</option>
@@ -201,7 +196,7 @@ export function renderUserPage(name) {
         </div>
         <div class="taskParts">
             <p id="showCategory"> CATEGORY: ${task.category}</p>
-            <p id="showPriority">PRIORITY: ${task.priority}</p>
+            <p id="showPriority">PRIORITY: <span class ="textPriority">${task.priority}</span></p>
         </div>
         <div class="taskParts">
             <p id="showStatus">STATUS: ${task.status}</p>
@@ -215,13 +210,18 @@ export function renderUserPage(name) {
         `   
         productsList.appendChild(article)
     })
-    
 
-    document.addEventListener("click", e => {
-        if (e.target.id === "logoutBtn") {
-            logout();
-        }
-    });
+    const textPriority = document.querySelectorAll(".textPriority");
+    textPriority.forEach(tP => {
+        if(tP.textContent === "high"){
+        tP.style.color = "red";
+    }else if(tP.textContent === "medium"){
+        tP.style.color = "orange";
+    }else{
+        tP.style.color = "green";
+    }
+    
+    })
 
 }
 
@@ -248,12 +248,21 @@ export function renderAdminPage(name) {
                 <h1>Task Management</h1>
                 <p>View, edit, and organize all academic tasks in one place.</p>
             </div>
+
+            <div>
+                <form>
+                    <select id="filterAssignee" type="text" name="Search for assignee">
+
+                    </select>
+                    <button type="submit" id="btnFilter">Filter assignee</button>
+                <form>
+            </div>
             <button id="togleRegisterProd" type="button">+ New task</button>
         </section>
 
         <form id="formTaskRegister" style="display: none;">
                     <label for="taskName"> Task title</label><br>
-                    <input id="taskName" type="text"><br><br>
+                    <input id="taskName" type="text" required><br><br>
 
                     <label for="category">Category:</label><br>
                     <select id="category" name="category">
@@ -280,7 +289,7 @@ export function renderAdminPage(name) {
                     </select><br><br>
 
                     <label for="dueDate">Due Date</label>
-                    <input id="dueDate" type="date"><br><br>
+                    <input id="dueDate" type="date" required><br><br>
 
                     <button id="submitProduct" type="submit">Agregar producto</button>
                 </form>
@@ -350,9 +359,9 @@ export function renderAdminPage(name) {
 
             <form id="editProductForm">
                 <label for="editTaskName"> Task title</label><br>
-                <input id="editTaskName" type="text"><br><br>
+                <input id="editTaskName" type="text" required><br><br>
 
-                <label for="editTaskcategory">Category:</label><br>
+                <label for="editTaskCategory">Category:</label><br>
                 <select id="editTaskCategory" editTaskcategory="category">
                     <option value="mathematics">Mathematics</option>
                     <option value="physics">Physics</option>
@@ -391,7 +400,7 @@ export function renderAdminPage(name) {
         <p id="showName"> <span class="head">TASK NAME</span>: ${task.name}</p>
         <p id="showResponsible"> <span class="head">ASSIGNEE</span>: ${task.responsible}</p>
         <p id="showCategory"> <span class="head">CATEGORY</span>: ${task.category}</p>
-        <p id="showPriority"> <span class="head">PRIORITY</span>: ${task.priority}</p>
+        <p id="showPriority"> <span class="head">PRIORITY</span>: <span class="textPriority">${task.priority}</span></p>
         <p id="showStatus"> <span class="head">STATUS</span>: ${task.status}</p>
         <p id="showDueDate"> <span class="head">DUE DATE</span>: ${task.dueDate}</p>
         <div class="EditDelete">
@@ -400,14 +409,38 @@ export function renderAdminPage(name) {
         </div>
     `
 
-        productsList.appendChild(article)
-    })
 
-        document.addEventListener("click", e => {
-        if (e.target.id === "logoutBtn") {
-            logout();
-        }
-    });
+    productsList.appendChild(article)
+    
+
+    })
+    
+    const textPriority = document.querySelectorAll(".textPriority");
+    textPriority.forEach(p => {
+        if(p.textContent === "high"){
+        p.style.color = "red";
+    }else if(p.textContent === "medium"){
+        p.style.color = "orange";
+    }else{
+        p.style.color = "green";
+    }
+
+    })
+/*     const filterAssignee = document.getElementById("filterAssignee")
+    state.users.forEach(user => {
+        const option = document.createElement("option");
+        option.classList.add("eachOption");
+        option.value = `${user.idResponsible}`;
+        option.textContent = `${user.name}`
+
+        filterAssignee.appendChild(option);
+    }) */
+
+    
+
+
+
+    
 
 
 

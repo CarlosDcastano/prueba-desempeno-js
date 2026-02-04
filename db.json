@@ -6,9 +6,55 @@
       "email": "carlos@gmail.com",
       "role": "admin",
       "password": "carlos123"
+    },
+    {
+      "id": "23e8",
+      "name": "david",
+      "email": "david@gmail.com",
+      "password": "david123",
+      "role": "user"
     }
   ],
   "tasks": [
-    
+    {
+      "id": "7224",
+      "name": "literatura",
+      "idResponsible": "2",
+      "responsible": "carlos",
+      "category": "physics",
+      "priority": "medium",
+      "status": "pending",
+      "dueDate": "2026-02-20"
+    },
+    {
+      "id": "c9ce",
+      "name": "otra cosita",
+      "idResponsible": "23e8",
+      "responsible": "david",
+      "category": "mathematics",
+      "priority": "medium",
+      "status": "done",
+      "dueDate": "2026-02-27"
+    },
+    {
+      "id": "e71c",
+      "name": "fqargsdfvb",
+      "idResponsible": "23e8",
+      "responsible": "david",
+      "category": "history",
+      "priority": "high",
+      "status": "pending",
+      "dueDate": "2026-02-06"
+    },
+    {
+      "id": "746c",
+      "name": "efsdfsd",
+      "idResponsible": "2",
+      "responsible": "carlos",
+      "category": "mathematics",
+      "priority": "high",
+      "status": "pending",
+      "dueDate": "2026-02-13"
+    }
   ]
 }

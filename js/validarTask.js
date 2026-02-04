@@ -10,3 +10,16 @@ export function validarTask(task){
             postTask(task)
         }
 }
+
+/* export function validarFilter(option){
+    if(!option){
+        console.log("Debe ingresar un valor")
+    }
+    const user  = state.users.find(u => u.idResponsible === option )
+    if(!user){
+        alert("No user matches the name you selected")
+    }else{
+        alert("Todo bien")
+    }
+
+} */

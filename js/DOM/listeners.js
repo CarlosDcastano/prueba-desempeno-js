@@ -1,9 +1,9 @@
 import { app, aside } from "./elements.js";
 import { renderSignUp, renderAdminPage } from "./render.js";
-import { validarLogin, validarSignup } from "../validarUser.js";
+import { validarLogin, validarSignup, logout } from "../validarUser.js";
 import { User } from "../models/user.js"
 import { Task } from "../models/task.js";
-import { validarTask } from "../validarTask.js";
+import { validarTask, /* validarFilter */ } from "../validarTask.js";
 import { state } from "../data/state.js";
 import { patchTask, deleteTask} from "../services/servicesTasks.js";
 
@@ -159,5 +159,19 @@ app.addEventListener("submit", async (e) => {
         renderAdminPage(state.currentUser.name);
     }
 
-});
+    });
+
+/*     document.addEventListener("submit", e => {
+        e.preventDefault();
+        if(e.target.id === "btnFilter"){
+            const option = document.querySelector(".eachOption").value;
+            validarFilter(option)
+        }
+    }); */
+
+    document.addEventListener("click", e => {
+        if (e.target.id === "logoutBtn") {
+            logout();
+        }
+    });
 }
