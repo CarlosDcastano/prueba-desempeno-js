@@ -12,7 +12,7 @@ export function renderLogin() {
         <section id="formsection" class="formvisible">
 
             <div id="title">
-              <img src="./img/logo.png" alt="logo"><span>CRUDZASO</span>
+                <img src="./img/logo.png" alt="logo"><span>CRUDZASO</span>
             </div>
             <h1>Welcome back</h1>
             <p>Enter your credentials to access the platform</p>
@@ -46,8 +46,8 @@ export function renderSignUp() {
     signUpSection.innerHTML = `
 
         <div id="title">
-              <img src="./img/logo.png" alt="logo">
-              <span>CRUDZASO</span>
+            <img src="./img/logo.png" alt="logo">
+            <span>CRUDZASO</span>
         </div>
         <h1>Create account</h1>
         <p>Join the academic performance platform today</p>
@@ -192,7 +192,6 @@ export function renderUserPage(name) {
     
     const currentTaskList = state.tasks.filter(t => t.idResponsible === state.currentUser.id)
 
-    console.log(currentTaskList)
     currentTaskList.forEach(task => {
         const article = document.createElement("article")
         article.classList.add("eachProduct")

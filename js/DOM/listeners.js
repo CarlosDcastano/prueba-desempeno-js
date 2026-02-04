@@ -22,7 +22,6 @@ export function setupListeners() {
         if (event.target.id === "loginForm") {
             const emailLogin = event.target.querySelector("#emailLogin").value;
             const passwordLogin = event.target.querySelector("#passwordLogin").value;
-            aside.style.display = "block"
             validarLogin(emailLogin, passwordLogin)
 
         }

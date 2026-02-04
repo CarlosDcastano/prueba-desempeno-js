@@ -14,8 +14,10 @@ export function validarLogin(email, password) {
     // Save local sesion
     localStorage.setItem("currentUser", JSON.stringify(user));
         if (user.role === "admin") {
+            aside.style.display = "block"
             renderAdminPage(user.name);
         } else {
+            aside.style.display = "block"
             renderUserPage(user.name);
         }
     } else {
