@@ -25,7 +25,7 @@ export async function postTask(task) {
         const res = await fetch(`${url}/tasks`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json' // Obligatorio para que el servidor entienda el cuerpo
+                'Content-Type': 'application/json' 
             },
             body: JSON.stringify(task)
 
